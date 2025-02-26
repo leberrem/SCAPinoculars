@@ -17,8 +17,8 @@ test: tidy lint
 release: semver
 	@version=$$(semver); \
 	git tag -s $$version -m"Release $$version"
-	goreleaser --rm-dist
+	goreleaser --clean
 
 test-release:
-	goreleaser --skip-publish --snapshot --rm-dist
+	goreleaser --skip-publish --snapshot --clean
 
