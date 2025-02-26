@@ -22,3 +22,6 @@ release: semver
 test-release:
 	goreleaser --skip-publish --snapshot --clean
 
+
+build:
+	go build
